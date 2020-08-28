@@ -2,6 +2,7 @@
 
 require 'json'
 require_relative '../lib/karabiner.rb'
+require_relative '../lib/key_codes.rb'
 
 def main
   left_modifier_held = "left_modifier_held"
@@ -12,6 +13,8 @@ def main
       {
         "description" => "Change A/S/D/F and J/K/L/; to ⇧/⌃/⌥/⌘ and ⌘/⌥/⌃/⇧ when held down",
         "manipulators" => [
+            generate_simultaneous(["a", "s"], ["left_shift", "left_control"], left_modifier_held),
+
             generate_one("a", "left_shift", left_modifier_held, right_modifier_held),
             generate_one("s", "left_control", left_modifier_held, right_modifier_held),
             generate_one("d", "left_option", left_modifier_held, right_modifier_held),
@@ -49,12 +52,39 @@ def generate_one(from_key, to_key, set_var, unless_var)
         Karabiner.set_variable(set_var, 1),
     ],
     "to_after_key_up" => [
-        Karabiner.set_variable(set_var, 10),
+        Karabiner.set_variable(set_var, 0),
     ],
     "conditions" => [
         Karabiner.variable_unless(unless_var, 1),
     ]
   }
 end
+
+def generate_simultaneous(from_keys, to_keys, set_var)
+    {
+      "description" => "#{from_keys.join("+")} -> #{to_keys.join("+")} when held down",
+      "type" => "basic",
+      "from" => {
+          "simultaneous" => KeyCodes.map(*from_keys),
+          "simultaneous_options" =>
+           {
+            "detect_key_down_uninterruptedly" => true,
+            "key_down_order" => "insensitive",
+            "key_up_order" => "insensitive",
+            "key_up_when" => "any",
+            "to_after_key_up" => [
+                Karabiner.set_variable(set_var, 0),
+            ]
+        }
+      },
+      "to" => [
+          Karabiner.set_variable(set_var, 1),
+          {
+            "key_code" => to_keys.first(),
+            "modifiers" => to_keys[1, 10],
+          },
+      ],
+    }
+  end
 
 main()
