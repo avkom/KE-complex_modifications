@@ -960,6 +960,9 @@
         },
         {
           "path": "json/nyankko.json"
+        },
+        {
+          "path": "json/home_row_as_modifiers.json"
         }
       ]
     },

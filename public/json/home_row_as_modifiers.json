@@ -1,0 +1,346 @@
+{
+  "title": "Home row as modifiers when held down",
+  "rules": [
+    {
+      "description": "Change A/S/D/F and J/K/L/; to ⇧/⌃/⌥/⌘ and ⌘/⌥/⌃/⇧ when held down",
+      "manipulators": [
+        {
+          "description": "a -> left_shift when held down",
+          "type": "basic",
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+            }
+          },
+          "to_if_alone": [
+            {
+              "key_code": "a"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_shift"
+            }
+          ],
+          "to": [
+            {
+              "set_variable": {
+                "name": "left_modifier_held",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "left_modifier_held",
+                "value": 10
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "right_modifier_held",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "description": "s -> left_control when held down",
+          "type": "basic",
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+            }
+          },
+          "to_if_alone": [
+            {
+              "key_code": "s"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to": [
+            {
+              "set_variable": {
+                "name": "left_modifier_held",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "left_modifier_held",
+                "value": 10
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "right_modifier_held",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "description": "d -> left_option when held down",
+          "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+            }
+          },
+          "to_if_alone": [
+            {
+              "key_code": "d"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_option"
+            }
+          ],
+          "to": [
+            {
+              "set_variable": {
+                "name": "left_modifier_held",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "left_modifier_held",
+                "value": 10
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "right_modifier_held",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "description": "f -> left_command when held down",
+          "type": "basic",
+          "from": {
+            "key_code": "f",
+            "modifiers": {
+            }
+          },
+          "to_if_alone": [
+            {
+              "key_code": "f"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "to": [
+            {
+              "set_variable": {
+                "name": "left_modifier_held",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "left_modifier_held",
+                "value": 10
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "right_modifier_held",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "description": "j -> left_command when held down",
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+            }
+          },
+          "to_if_alone": [
+            {
+              "key_code": "j"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "to": [
+            {
+              "set_variable": {
+                "name": "right_modifier_held",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "right_modifier_held",
+                "value": 10
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "left_modifier_held",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "description": "k -> left_option when held down",
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+            }
+          },
+          "to_if_alone": [
+            {
+              "key_code": "k"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_option"
+            }
+          ],
+          "to": [
+            {
+              "set_variable": {
+                "name": "right_modifier_held",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "right_modifier_held",
+                "value": 10
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "left_modifier_held",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "description": "l -> left_control when held down",
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+            }
+          },
+          "to_if_alone": [
+            {
+              "key_code": "l"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to": [
+            {
+              "set_variable": {
+                "name": "right_modifier_held",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "right_modifier_held",
+                "value": 10
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "left_modifier_held",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "description": "semicolon -> left_shift when held down",
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+            }
+          },
+          "to_if_alone": [
+            {
+              "key_code": "semicolon"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_shift"
+            }
+          ],
+          "to": [
+            {
+              "set_variable": {
+                "name": "right_modifier_held",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "right_modifier_held",
+                "value": 10
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "left_modifier_held",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
