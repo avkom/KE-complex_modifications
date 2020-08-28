@@ -14,51 +14,51 @@ def main
         "description" => "Change A/S/D/F and J/K/L/; to ⇧/⌃/⌥/⌘ and ⌘/⌥/⌃/⇧ when held down",
         "manipulators" => [
             # Left hand modifiers
-            generate_simultaneous(["a", "s", "d", "f"], ["left_shift", "left_control", "left_option", "left_command"], left_modifier_held),
+            generate_simultaneous_modifiers(["a", "s", "d", "f"], ["left_shift", "left_control", "left_option", "left_command"], left_modifier_held),
 
-            generate_simultaneous(["a", "s", "d"], ["left_shift", "left_control", "left_option"], left_modifier_held),
-            generate_simultaneous(["a", "s", "f"], ["left_shift", "left_control", "left_command"], left_modifier_held),
-            generate_simultaneous(["a", "d", "f"], ["left_shift", "left_option", "left_command"], left_modifier_held),
-            generate_simultaneous(["s", "d", "f"], ["left_control", "left_option", "left_command"], left_modifier_held),
+            generate_simultaneous_modifiers(["a", "s", "d"], ["left_shift", "left_control", "left_option"], left_modifier_held),
+            generate_simultaneous_modifiers(["a", "s", "f"], ["left_shift", "left_control", "left_command"], left_modifier_held),
+            generate_simultaneous_modifiers(["a", "d", "f"], ["left_shift", "left_option", "left_command"], left_modifier_held),
+            generate_simultaneous_modifiers(["s", "d", "f"], ["left_control", "left_option", "left_command"], left_modifier_held),
 
-            generate_simultaneous(["a", "s"], ["left_shift", "left_control"], left_modifier_held),
-            generate_simultaneous(["a", "d"], ["left_shift", "left_option"], left_modifier_held),
-            generate_simultaneous(["a", "f"], ["left_shift", "left_command"], left_modifier_held),
-            generate_simultaneous(["s", "d"], ["left_control", "left_option"], left_modifier_held),
-            generate_simultaneous(["s", "f"], ["left_control", "left_command"], left_modifier_held),
-            generate_simultaneous(["d", "f"], ["left_option", "left_command"], left_modifier_held),
+            generate_simultaneous_modifiers(["a", "s"], ["left_shift", "left_control"], left_modifier_held),
+            generate_simultaneous_modifiers(["a", "d"], ["left_shift", "left_option"], left_modifier_held),
+            generate_simultaneous_modifiers(["a", "f"], ["left_shift", "left_command"], left_modifier_held),
+            generate_simultaneous_modifiers(["s", "d"], ["left_control", "left_option"], left_modifier_held),
+            generate_simultaneous_modifiers(["s", "f"], ["left_control", "left_command"], left_modifier_held),
+            generate_simultaneous_modifiers(["d", "f"], ["left_option", "left_command"], left_modifier_held),
 
-            generate_one("a", "left_shift", left_modifier_held, right_modifier_held),
-            generate_one("s", "left_control", left_modifier_held, right_modifier_held),
-            generate_one("d", "left_option", left_modifier_held, right_modifier_held),
-            generate_one("f", "left_command", left_modifier_held, right_modifier_held),
+            generate_single_modifier("a", "left_shift", left_modifier_held, right_modifier_held),
+            generate_single_modifier("s", "left_control", left_modifier_held, right_modifier_held),
+            generate_single_modifier("d", "left_option", left_modifier_held, right_modifier_held),
+            generate_single_modifier("f", "left_command", left_modifier_held, right_modifier_held),
 
             # Right hand modifiers
-            generate_simultaneous(["semicolon", "l", "k", "j"], ["left_shift", "left_control", "left_option", "left_command"], right_modifier_held),
+            generate_simultaneous_modifiers(["semicolon", "l", "k", "j"], ["left_shift", "left_control", "left_option", "left_command"], right_modifier_held),
 
-            generate_simultaneous(["semicolon", "l", "k"], ["left_shift", "left_control", "left_option"], right_modifier_held),
-            generate_simultaneous(["semicolon", "l", "j"], ["left_shift", "left_control", "left_command"], right_modifier_held),
-            generate_simultaneous(["semicolon", "k", "j"], ["left_shift", "left_option", "left_command"], right_modifier_held),
-            generate_simultaneous(["l", "k", "j"], ["left_control", "left_option", "left_command"], right_modifier_held),
+            generate_simultaneous_modifiers(["semicolon", "l", "k"], ["left_shift", "left_control", "left_option"], right_modifier_held),
+            generate_simultaneous_modifiers(["semicolon", "l", "j"], ["left_shift", "left_control", "left_command"], right_modifier_held),
+            generate_simultaneous_modifiers(["semicolon", "k", "j"], ["left_shift", "left_option", "left_command"], right_modifier_held),
+            generate_simultaneous_modifiers(["l", "k", "j"], ["left_control", "left_option", "left_command"], right_modifier_held),
 
-            generate_simultaneous(["semicolon", "l"], ["left_shift", "left_control"], right_modifier_held),
-            generate_simultaneous(["semicolon", "k"], ["left_shift", "left_option"], right_modifier_held),
-            generate_simultaneous(["semicolon", "j"], ["left_shift", "left_command"], right_modifier_held),
-            generate_simultaneous(["l", "k"], ["left_control", "left_option"], right_modifier_held),
-            generate_simultaneous(["l", "j"], ["left_control", "left_command"], right_modifier_held),
-            generate_simultaneous(["k", "j"], ["left_option", "left_command"], right_modifier_held),
+            generate_simultaneous_modifiers(["semicolon", "l"], ["left_shift", "left_control"], right_modifier_held),
+            generate_simultaneous_modifiers(["semicolon", "k"], ["left_shift", "left_option"], right_modifier_held),
+            generate_simultaneous_modifiers(["semicolon", "j"], ["left_shift", "left_command"], right_modifier_held),
+            generate_simultaneous_modifiers(["l", "k"], ["left_control", "left_option"], right_modifier_held),
+            generate_simultaneous_modifiers(["l", "j"], ["left_control", "left_command"], right_modifier_held),
+            generate_simultaneous_modifiers(["k", "j"], ["left_option", "left_command"], right_modifier_held),
 
-            generate_one("semicolon", "left_shift", right_modifier_held, left_modifier_held),
-            generate_one("l", "left_control", right_modifier_held, left_modifier_held),
-            generate_one("k", "left_option", right_modifier_held, left_modifier_held),
-            generate_one("j", "left_command", right_modifier_held, left_modifier_held),
+            generate_single_modifier("semicolon", "left_shift", right_modifier_held, left_modifier_held),
+            generate_single_modifier("l", "left_control", right_modifier_held, left_modifier_held),
+            generate_single_modifier("k", "left_option", right_modifier_held, left_modifier_held),
+            generate_single_modifier("j", "left_command", right_modifier_held, left_modifier_held),
         ],
       },
     ],
   )
 end
 
-def generate_one(from_key, to_key, set_var, unless_var)
+def generate_single_modifier(from_key, to_key, set_var, unless_var)
   {
     "description" => "#{from_key} -> #{to_key} when held down",
     "type" => "basic",
@@ -88,7 +88,7 @@ def generate_one(from_key, to_key, set_var, unless_var)
   }
 end
 
-def generate_simultaneous(from_keys, to_keys, set_var)
+def generate_simultaneous_modifiers(from_keys, to_keys, set_var)
     {
       "description" => "#{from_keys.join(" + ")} -> #{to_keys.join(" + ")} when held down",
       "type" => "basic",
