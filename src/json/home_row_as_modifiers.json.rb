@@ -7,6 +7,8 @@ require_relative '../lib/key_codes.rb'
 def main
   left_modifier_held = "left_modifier_held"
   right_modifier_held = "right_modifier_held"
+  spacebar_held_down = "spacebar_held_down"
+
   puts JSON.pretty_generate(
     "title" => "Home row as modifiers when held down",
     "rules" => [
@@ -52,6 +54,21 @@ def main
             generate_single_modifier("l", "left_control", right_modifier_held, left_modifier_held),
             generate_single_modifier("k", "left_option", right_modifier_held, left_modifier_held),
             generate_single_modifier("j", "left_command", right_modifier_held, left_modifier_held),
+        ],
+      },
+
+      {
+        "description" => "Change Space + I/J/K/L to Up/Left/Down/Right",
+        "manipulators" => [
+            generate_simultaneous("spacebar", "i", "up_arrow", spacebar_held_down),
+            generate_simultaneous("spacebar", "j", "left_arrow", spacebar_held_down),
+            generate_simultaneous("spacebar", "k", "down_arrow", spacebar_held_down),
+            generate_simultaneous("spacebar", "l", "right_arrow", spacebar_held_down),
+
+            generate_rebind_if("i", "up_arrow", spacebar_held_down),
+            generate_rebind_if("j", "left_arrow", spacebar_held_down),
+            generate_rebind_if("k", "down_arrow", spacebar_held_down),
+            generate_rebind_if("l", "right_arrow", spacebar_held_down),
         ],
       },
     ],
@@ -113,6 +130,58 @@ def generate_simultaneous_modifiers(from_keys, to_keys, set_var)
           },
       ],
     }
-  end
+end
+
+def generate_simultaneous(trigger_key, from_key, to_key, set_var)
+    {
+      "description" => "#{trigger_key} + #{from_key} -> #{to_key} when held down",
+      "type" => "basic",
+      "from" => {
+          "simultaneous" => [
+            { "key_code" => trigger_key },
+            { "key_code" => from_key },
+          ],
+          "simultaneous_options" =>
+          {
+            "detect_key_down_uninterruptedly" => true,
+            "key_down_order" => "strict",
+            "key_up_order" => "strict_inverse",
+            "to_after_key_up" => [
+                Karabiner.set_variable(set_var, 0),
+            ],
+          },
+           "modifiers" => {
+            "optional" => ["any"]
+          },
+      },
+      "to" => [
+          Karabiner.set_variable(set_var, 1),
+          {
+            "key_code" => to_key,
+          },
+      ],
+    }
+end
+
+def generate_rebind_if(from_key, to_key, if_var)
+  {
+    "description" => "#{from_key} -> #{to_key} when var = 1",  
+    "type" => "basic",
+      "from" => {
+        "key_code" => from_key,
+        "modifiers" => {
+            "optional" => ["any"]
+        },
+      },
+      "to" => [
+        {
+          "key_code" => to_key,
+        },
+      ],
+      "conditions" => [
+        Karabiner.variable_if(if_var, 1),
+      ]
+  }
+end
 
 main()
