@@ -60,15 +60,15 @@ def main
       {
         "description" => "Change Space + I/J/K/L to Up/Left/Down/Right",
         "manipulators" => [
-            generate_simultaneous("spacebar", "i", "up_arrow", spacebar_held_down),
-            generate_simultaneous("spacebar", "j", "left_arrow", spacebar_held_down),
-            generate_simultaneous("spacebar", "k", "down_arrow", spacebar_held_down),
-            generate_simultaneous("spacebar", "l", "right_arrow", spacebar_held_down),
-
             generate_rebind_if("i", "up_arrow", spacebar_held_down),
             generate_rebind_if("j", "left_arrow", spacebar_held_down),
             generate_rebind_if("k", "down_arrow", spacebar_held_down),
             generate_rebind_if("l", "right_arrow", spacebar_held_down),
+
+            generate_simultaneous("spacebar", "i", "up_arrow", spacebar_held_down),
+            generate_simultaneous("spacebar", "j", "left_arrow", spacebar_held_down),
+            generate_simultaneous("spacebar", "k", "down_arrow", spacebar_held_down),
+            generate_simultaneous("spacebar", "l", "right_arrow", spacebar_held_down),         
         ],
       },
     ],
@@ -144,8 +144,8 @@ def generate_simultaneous(trigger_key, from_key, to_key, set_var)
           "simultaneous_options" =>
           {
             "detect_key_down_uninterruptedly" => true,
-            "key_down_order" => "strict",
-            "key_up_order" => "strict_inverse",
+            "key_down_order" => "insensitive",
+            "key_up_order" => "insensitive",
             "to_after_key_up" => [
                 Karabiner.set_variable(set_var, 0),
             ],
@@ -160,6 +160,9 @@ def generate_simultaneous(trigger_key, from_key, to_key, set_var)
             "key_code" => to_key,
           },
       ],
+      "parameters" => {
+        "basic.simultaneous_threshold_milliseconds" => 300,
+      },
     }
 end
 
