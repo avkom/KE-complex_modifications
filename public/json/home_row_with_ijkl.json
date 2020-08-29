@@ -587,6 +587,54 @@
           ]
         },
         {
+          "description": "m -> delete_or_backspace when var is 1",
+          "type": "basic",
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "arrow_mode",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "description": "semicolon -> delete_forward when var is 1",
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_forward"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "arrow_mode",
+              "value": 1
+            }
+          ]
+        },
+        {
           "description": "a + i -> left_shift + up_arrow",
           "type": "basic",
           "from": {
@@ -764,6 +812,98 @@
             },
             {
               "key_code": "right_arrow",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "a + m -> left_shift + delete_or_backspace",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "a"
+              },
+              {
+                "key_code": "m"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "arrow_mode",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "arrow_mode",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "a + semicolon -> left_shift + delete_forward",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "a"
+              },
+              {
+                "key_code": "semicolon"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "arrow_mode",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "arrow_mode",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "delete_forward",
               "modifiers": [
                 "left_shift"
               ]
@@ -955,6 +1095,98 @@
           ]
         },
         {
+          "description": "s + m -> left_control + delete_or_backspace",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "s"
+              },
+              {
+                "key_code": "m"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "arrow_mode",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "arrow_mode",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "s + semicolon -> left_control + delete_forward",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "s"
+              },
+              {
+                "key_code": "semicolon"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "arrow_mode",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "arrow_mode",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "delete_forward",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        },
+        {
           "description": "d + i -> left_option + up_arrow",
           "type": "basic",
           "from": {
@@ -1132,6 +1364,98 @@
             },
             {
               "key_code": "right_arrow",
+              "modifiers": [
+                "left_option"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "d + m -> left_option + delete_or_backspace",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "d"
+              },
+              {
+                "key_code": "m"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "arrow_mode",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "arrow_mode",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "left_option"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "d + semicolon -> left_option + delete_forward",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "d"
+              },
+              {
+                "key_code": "semicolon"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "arrow_mode",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "arrow_mode",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "delete_forward",
               "modifiers": [
                 "left_option"
               ]
@@ -1323,6 +1647,98 @@
           ]
         },
         {
+          "description": "f + m -> left_command + delete_or_backspace",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "f"
+              },
+              {
+                "key_code": "m"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "arrow_mode",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "arrow_mode",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "f + semicolon -> left_command + delete_forward",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "f"
+              },
+              {
+                "key_code": "semicolon"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "arrow_mode",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "arrow_mode",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "delete_forward",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ]
+        },
+        {
           "description": "g + i ->  + up_arrow",
           "type": "basic",
           "from": {
@@ -1500,6 +1916,98 @@
             },
             {
               "key_code": "right_arrow",
+              "modifiers": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "description": "g + m ->  + delete_or_backspace",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "g"
+              },
+              {
+                "key_code": "m"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "arrow_mode",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "arrow_mode",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "description": "g + semicolon ->  + delete_forward",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "g"
+              },
+              {
+                "key_code": "semicolon"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "arrow_mode",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "arrow_mode",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "delete_forward",
               "modifiers": [
 
               ]
