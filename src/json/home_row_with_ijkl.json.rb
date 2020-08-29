@@ -35,7 +35,27 @@ def main
             generate_simultaneous("a", "i", "up_arrow", ["left_shift"], arrow_mode),
             generate_simultaneous("a", "j", "left_arrow", ["left_shift"], arrow_mode),
             generate_simultaneous("a", "k", "down_arrow", ["left_shift"], arrow_mode),
-            generate_simultaneous("a", "l", "right_arrow", ["left_shift"], arrow_mode),  
+            generate_simultaneous("a", "l", "right_arrow", ["left_shift"], arrow_mode),
+
+            generate_simultaneous("s", "i", "up_arrow", ["left_control"], arrow_mode),
+            generate_simultaneous("s", "j", "left_arrow", ["left_control"], arrow_mode),
+            generate_simultaneous("s", "k", "down_arrow", ["left_control"], arrow_mode),
+            generate_simultaneous("s", "l", "right_arrow", ["left_control"], arrow_mode),
+
+            generate_simultaneous("d", "i", "up_arrow", ["left_option"], arrow_mode),
+            generate_simultaneous("d", "j", "left_arrow", ["left_option"], arrow_mode),
+            generate_simultaneous("d", "k", "down_arrow", ["left_option"], arrow_mode),
+            generate_simultaneous("d", "l", "right_arrow", ["left_option"], arrow_mode),
+
+            generate_simultaneous("f", "i", "up_arrow", ["left_command"], arrow_mode),
+            generate_simultaneous("f", "j", "left_arrow", ["left_command"], arrow_mode),
+            generate_simultaneous("f", "k", "down_arrow", ["left_command"], arrow_mode),
+            generate_simultaneous("f", "l", "right_arrow", ["left_command"], arrow_mode),
+
+            generate_simultaneous("g", "i", "up_arrow", [], arrow_mode),
+            generate_simultaneous("g", "j", "left_arrow", [], arrow_mode),
+            generate_simultaneous("g", "k", "down_arrow", [], arrow_mode),
+            generate_simultaneous("g", "l", "right_arrow", [], arrow_mode),
         ],
       },
     ],
