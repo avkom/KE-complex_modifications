@@ -5,9 +5,7 @@ require_relative '../lib/karabiner.rb'
 require_relative '../lib/key_codes.rb'
 
 def main
-  left_modifier_held = "left_modifier_held"
-  right_modifier_held = "right_modifier_held"
-  spacebar_held_down = "spacebar_held_down"
+  arrow_mode = "arrow_mode"
 
   puts JSON.pretty_generate(
     "title" => "Home row as modifiers when held down",
@@ -52,6 +50,30 @@ def main
             generate_simultaneous_modifiers(["k", "m"], ["left_option"]),
         ],
       },
+
+      {
+        "description" => "Change A/S/D/F + ␣ + I/J/K/L/M/; to ⇧/⌃/⌥/⌘ + ↑/←/↓/→/⌫/⌦",
+        "manipulators" => [
+          generate_simultaneous("a", "spacebar", "left_shift", [], arrow_mode),
+          generate_simultaneous("s", "spacebar", "left_control", [], arrow_mode),
+          generate_simultaneous("d", "spacebar", "left_option", [], arrow_mode),
+          generate_simultaneous("f", "spacebar", "left_command", [], arrow_mode),
+
+          generate_simultaneous("spacebar", "i", "up_arrow", [], arrow_mode),
+          generate_simultaneous("spacebar", "j", "left_arrow", [], arrow_mode),
+          generate_simultaneous("spacebar", "k", "down_arrow", [], arrow_mode),
+          generate_simultaneous("spacebar", "l", "right_arrow", [], arrow_mode),
+          generate_simultaneous("spacebar", "m", "delete_or_backspace", [], arrow_mode),
+          generate_simultaneous("spacebar", "semicolon", "delete_forward", [], arrow_mode),
+
+          generate_rebind_if("i", "up_arrow", arrow_mode),
+          generate_rebind_if("j", "left_arrow", arrow_mode),
+          generate_rebind_if("k", "down_arrow", arrow_mode),
+          generate_rebind_if("l", "right_arrow", arrow_mode),
+          generate_rebind_if("m", "delete_or_backspace", arrow_mode),
+          generate_rebind_if("semicolon", "delete_forward", arrow_mode),
+        ],
+      },
     ],
   )
 end
@@ -77,6 +99,62 @@ def generate_simultaneous_modifiers(from_keys, to_keys)
           },
       ],
     }
+end
+
+def generate_simultaneous(trigger_key, from_key, to_key, modifiers, set_var)
+  {
+    "description" => "#{trigger_key} + #{from_key} -> #{modifiers.join(" + ")} + #{to_key}",
+    "type" => "basic",
+    "from" => {
+        "simultaneous" => [
+          { "key_code" => trigger_key },
+          { "key_code" => from_key },
+        ],
+        "simultaneous_options" =>
+        {
+          "detect_key_down_uninterruptedly" => true,
+          "key_down_order" => "insensitive",
+          "key_up_order" => "insensitive",
+          "to_after_key_up" => [
+              Karabiner.set_variable(set_var, 0),
+          ],
+        },
+         "modifiers" => {
+          "optional" => ["any"]
+        },
+    },
+    "to" => [
+        Karabiner.set_variable(set_var, 1),
+        {
+          "key_code" => to_key,
+          "modifiers" => [
+              *modifiers
+          ]
+        },
+        
+    ],
+  }
+end
+
+def generate_rebind_if(from_key, to_key, if_var)
+  {
+    "description" => "#{from_key} -> #{to_key} when var is 1",  
+    "type" => "basic",
+      "from" => {
+        "key_code" => from_key,
+        "modifiers" => {
+            "optional" => ["any"]
+        },
+      },
+      "to" => [
+        {
+          "key_code" => to_key,
+        },
+      ],
+      "conditions" => [
+        Karabiner.variable_if(if_var, 1),
+      ]
+  }
 end
 
 main()
