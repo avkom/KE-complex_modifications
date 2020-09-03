@@ -52,19 +52,13 @@ def main
       },
 
       {
-        "description" => "Change A/S/D/F + ␣ + I/J/K/L/M/; to ⇧/⌃/⌥/⌘ + ↑/←/↓/→/⌫/⌦",
+        "description" => "Change A/S/D/F/G + ␣ + I/J/K/L/M/; to ⇧/⌃/⌥/⌘/<no modifier> + ↑/←/↓/→/⌫/⌦",
         "manipulators" => [
           generate_simultaneous("a", "spacebar", "left_shift", [], arrow_mode),
           generate_simultaneous("s", "spacebar", "left_control", [], arrow_mode),
           generate_simultaneous("d", "spacebar", "left_option", [], arrow_mode),
           generate_simultaneous("f", "spacebar", "left_command", [], arrow_mode),
-
-          generate_simultaneous("spacebar", "i", "up_arrow", [], arrow_mode),
-          generate_simultaneous("spacebar", "j", "left_arrow", [], arrow_mode),
-          generate_simultaneous("spacebar", "k", "down_arrow", [], arrow_mode),
-          generate_simultaneous("spacebar", "l", "right_arrow", [], arrow_mode),
-          generate_simultaneous("spacebar", "m", "delete_or_backspace", [], arrow_mode),
-          generate_simultaneous("spacebar", "semicolon", "delete_forward", [], arrow_mode),
+          generate_simultaneous("g", "spacebar", "vk_none", [], arrow_mode),
 
           generate_rebind_if("i", "up_arrow", arrow_mode),
           generate_rebind_if("j", "left_arrow", arrow_mode),
