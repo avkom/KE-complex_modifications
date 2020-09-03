@@ -2,7 +2,7 @@
   "title": "Home row as modifiers when held down",
   "rules": [
     {
-      "description": "Change A/S/D/F and J/K/L/; to ⇧/⌃/⌥/⌘ and ⌘/⌥/⌃/⇧ when held down",
+      "description": "Change A/S/D/F and J/K/L/; to ⇧/⌃/⌥/⌘ and ⌘/⌥/⌃/⇧ when press 2/3/4 keys simultaneously on the same side; S+V -> ⌃; D+V -> ⌥; K+M -> ⌥; L+M -> ⌃",
       "manipulators": [
         {
           "description": "a + s + d + f -> left_shift + left_control + left_option + left_command when held down",
@@ -26,24 +26,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "left_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -73,24 +59,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "left_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -119,24 +91,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "left_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -165,24 +123,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "left_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -211,24 +155,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "left_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_control",
               "modifiers": [
@@ -254,24 +184,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "left_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -296,24 +212,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "left_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -338,24 +240,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "left_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -380,24 +268,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "left_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_control",
               "modifiers": [
@@ -422,24 +296,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "left_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_control",
               "modifiers": [
@@ -464,24 +324,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "left_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_option",
               "modifiers": [
@@ -491,170 +337,58 @@
           ]
         },
         {
-          "description": "a -> left_shift when held down",
+          "description": "s + v -> left_control when held down",
           "type": "basic",
           "from": {
-            "key_code": "a",
-            "modifiers": {
+            "simultaneous": [
+              {
+                "key_code": "s"
+              },
+              {
+                "key_code": "v"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
             }
           },
-          "to_if_alone": [
-            {
-              "key_code": "a"
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "left_shift"
-            }
-          ],
           "to": [
             {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 1
-              }
-            }
-          ],
-          "to_after_key_up": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 0
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_unless",
-              "name": "right_modifier_held",
-              "value": 1
+              "key_code": "left_control",
+              "modifiers": [
+
+              ]
             }
           ]
         },
         {
-          "description": "s -> left_control when held down",
+          "description": "d + v -> left_option when held down",
           "type": "basic",
           "from": {
-            "key_code": "s",
-            "modifiers": {
+            "simultaneous": [
+              {
+                "key_code": "d"
+              },
+              {
+                "key_code": "v"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
             }
           },
-          "to_if_alone": [
-            {
-              "key_code": "s"
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "left_control"
-            }
-          ],
           "to": [
             {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 1
-              }
-            }
-          ],
-          "to_after_key_up": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 0
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_unless",
-              "name": "right_modifier_held",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "description": "d -> left_option when held down",
-          "type": "basic",
-          "from": {
-            "key_code": "d",
-            "modifiers": {
-            }
-          },
-          "to_if_alone": [
-            {
-              "key_code": "d"
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "left_option"
-            }
-          ],
-          "to": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 1
-              }
-            }
-          ],
-          "to_after_key_up": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 0
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_unless",
-              "name": "right_modifier_held",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "description": "f -> left_command when held down",
-          "type": "basic",
-          "from": {
-            "key_code": "f",
-            "modifiers": {
-            }
-          },
-          "to_if_alone": [
-            {
-              "key_code": "f"
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "left_command"
-            }
-          ],
-          "to": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 1
-              }
-            }
-          ],
-          "to_after_key_up": [
-            {
-              "set_variable": {
-                "name": "left_modifier_held",
-                "value": 0
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_unless",
-              "name": "right_modifier_held",
-              "value": 1
+              "key_code": "left_option",
+              "modifiers": [
+
+              ]
             }
           ]
         },
@@ -680,24 +414,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "right_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -727,24 +447,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "right_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -773,24 +479,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "right_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -819,24 +511,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "right_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -865,24 +543,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "right_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_control",
               "modifiers": [
@@ -908,24 +572,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "right_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -950,24 +600,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "right_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -992,24 +628,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "right_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -1034,24 +656,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "right_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_control",
               "modifiers": [
@@ -1076,24 +684,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "right_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_control",
               "modifiers": [
@@ -1118,24 +712,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "right_modifier_held",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_option",
               "modifiers": [
@@ -1145,457 +725,60 @@
           ]
         },
         {
-          "description": "semicolon -> left_shift when held down",
-          "type": "basic",
-          "from": {
-            "key_code": "semicolon",
-            "modifiers": {
-            }
-          },
-          "to_if_alone": [
-            {
-              "key_code": "semicolon"
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "left_shift"
-            }
-          ],
-          "to": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 1
-              }
-            }
-          ],
-          "to_after_key_up": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 0
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_unless",
-              "name": "left_modifier_held",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "description": "l -> left_control when held down",
-          "type": "basic",
-          "from": {
-            "key_code": "l",
-            "modifiers": {
-            }
-          },
-          "to_if_alone": [
-            {
-              "key_code": "l"
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "left_control"
-            }
-          ],
-          "to": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 1
-              }
-            }
-          ],
-          "to_after_key_up": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 0
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_unless",
-              "name": "left_modifier_held",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "description": "k -> left_option when held down",
-          "type": "basic",
-          "from": {
-            "key_code": "k",
-            "modifiers": {
-            }
-          },
-          "to_if_alone": [
-            {
-              "key_code": "k"
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "left_option"
-            }
-          ],
-          "to": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 1
-              }
-            }
-          ],
-          "to_after_key_up": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 0
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_unless",
-              "name": "left_modifier_held",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "description": "j -> left_command when held down",
-          "type": "basic",
-          "from": {
-            "key_code": "j",
-            "modifiers": {
-            }
-          },
-          "to_if_alone": [
-            {
-              "key_code": "j"
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "left_command"
-            }
-          ],
-          "to": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 1
-              }
-            }
-          ],
-          "to_after_key_up": [
-            {
-              "set_variable": {
-                "name": "right_modifier_held",
-                "value": 0
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_unless",
-              "name": "left_modifier_held",
-              "value": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "Change Space + I/J/K/L to Up/Left/Down/Right",
-      "manipulators": [
-        {
-          "description": "i -> up_arrow when var = 1",
-          "type": "basic",
-          "from": {
-            "key_code": "i",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "up_arrow"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "spacebar_held_down",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "description": "j -> left_arrow when var = 1",
-          "type": "basic",
-          "from": {
-            "key_code": "j",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_arrow"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "spacebar_held_down",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "description": "k -> down_arrow when var = 1",
-          "type": "basic",
-          "from": {
-            "key_code": "k",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "down_arrow"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "spacebar_held_down",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "description": "l -> right_arrow when var = 1",
-          "type": "basic",
-          "from": {
-            "key_code": "l",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "right_arrow"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "spacebar_held_down",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "description": "spacebar + i -> up_arrow when held down",
+          "description": "l + m -> left_control when held down",
           "type": "basic",
           "from": {
             "simultaneous": [
-              {
-                "key_code": "spacebar"
-              },
-              {
-                "key_code": "i"
-              }
-            ],
-            "simultaneous_options": {
-              "detect_key_down_uninterruptedly": true,
-              "key_down_order": "insensitive",
-              "key_up_order": "insensitive",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "spacebar_held_down",
-                    "value": 0
-                  }
-                }
-              ]
-            },
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "spacebar_held_down",
-                "value": 1
-              }
-            },
-            {
-              "key_code": "up_arrow"
-            }
-          ],
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 300
-          }
-        },
-        {
-          "description": "spacebar + j -> left_arrow when held down",
-          "type": "basic",
-          "from": {
-            "simultaneous": [
-              {
-                "key_code": "spacebar"
-              },
-              {
-                "key_code": "j"
-              }
-            ],
-            "simultaneous_options": {
-              "detect_key_down_uninterruptedly": true,
-              "key_down_order": "insensitive",
-              "key_up_order": "insensitive",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "spacebar_held_down",
-                    "value": 0
-                  }
-                }
-              ]
-            },
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "spacebar_held_down",
-                "value": 1
-              }
-            },
-            {
-              "key_code": "left_arrow"
-            }
-          ],
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 300
-          }
-        },
-        {
-          "description": "spacebar + k -> down_arrow when held down",
-          "type": "basic",
-          "from": {
-            "simultaneous": [
-              {
-                "key_code": "spacebar"
-              },
-              {
-                "key_code": "k"
-              }
-            ],
-            "simultaneous_options": {
-              "detect_key_down_uninterruptedly": true,
-              "key_down_order": "insensitive",
-              "key_up_order": "insensitive",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "spacebar_held_down",
-                    "value": 0
-                  }
-                }
-              ]
-            },
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "spacebar_held_down",
-                "value": 1
-              }
-            },
-            {
-              "key_code": "down_arrow"
-            }
-          ],
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 300
-          }
-        },
-        {
-          "description": "spacebar + l -> right_arrow when held down",
-          "type": "basic",
-          "from": {
-            "simultaneous": [
-              {
-                "key_code": "spacebar"
-              },
               {
                 "key_code": "l"
+              },
+              {
+                "key_code": "m"
               }
             ],
             "simultaneous_options": {
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "spacebar_held_down",
-                    "value": 0
-                  }
-                }
-              ]
-            },
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
             {
-              "set_variable": {
-                "name": "spacebar_held_down",
-                "value": 1
-              }
-            },
-            {
-              "key_code": "right_arrow"
+              "key_code": "left_control",
+              "modifiers": [
+
+              ]
             }
-          ],
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 300
-          }
+          ]
+        },
+        {
+          "description": "k + m -> left_option when held down",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "m"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_option",
+              "modifiers": [
+
+              ]
+            }
+          ]
         }
       ]
     }
