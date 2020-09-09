@@ -1,11 +1,11 @@
 {
-  "title": "Home row as modifiers + IJKL cursor",
+  "title": "Modifiers and arrows on home row",
   "rules": [
     {
-      "description": "Change A/S/D/F/G + ␣ + I/J/K/L/M/;/U/O/Y/P to ⇧/⌃/⌥/⌘/<no modifier> + ↑/←/↓/→/⌫/⌦/⇞/⇟/↖/↘",
+      "description": "Change A/S/D/F + ␣ to ⇧/⌃/⌥/⌘ + fn",
       "manipulators": [
         {
-          "description": "spacebar + a + s + d + f -> left_control + left_option + left_command + to_key",
+          "description": "spacebar + a + s + d + f -> left_control + left_option + left_command + fn + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -29,36 +29,23 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "arrow_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "arrow_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
                 "left_control",
                 "left_option",
-                "left_command"
+                "left_command",
+                "fn"
               ]
             }
           ]
         },
         {
-          "description": "spacebar + a + s + d -> left_control + left_option + to_key",
+          "description": "spacebar + a + s + d -> left_control + left_option + fn + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -79,35 +66,22 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "arrow_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "arrow_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
                 "left_control",
-                "left_option"
+                "left_option",
+                "fn"
               ]
             }
           ]
         },
         {
-          "description": "spacebar + a + s + f -> left_control + left_command + to_key",
+          "description": "spacebar + a + s + f -> left_control + left_command + fn + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -128,35 +102,22 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "arrow_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "arrow_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
                 "left_control",
-                "left_command"
+                "left_command",
+                "fn"
               ]
             }
           ]
         },
         {
-          "description": "spacebar + a + d + f -> left_option + left_command + to_key",
+          "description": "spacebar + a + d + f -> left_option + left_command + fn + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -177,35 +138,22 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "arrow_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "arrow_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
                 "left_option",
-                "left_command"
+                "left_command",
+                "fn"
               ]
             }
           ]
         },
         {
-          "description": "spacebar + s + d + f -> left_option + left_command + to_key",
+          "description": "spacebar + s + d + f -> left_option + left_command + fn + left_control",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -226,35 +174,22 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "arrow_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "arrow_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_control",
               "modifiers": [
                 "left_option",
-                "left_command"
+                "left_command",
+                "fn"
               ]
             }
           ]
         },
         {
-          "description": "spacebar + a + s -> left_control + to_key",
+          "description": "spacebar + a + s -> left_control + fn + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -272,34 +207,21 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "arrow_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
             {
-              "set_variable": {
-                "name": "arrow_mode",
-                "value": 1
-              }
-            },
-            {
               "key_code": "left_shift",
               "modifiers": [
-                "left_control"
+                "left_control",
+                "fn"
               ]
             }
           ]
         },
         {
-          "description": "spacebar + a + d -> left_option + to_key",
+          "description": "spacebar + a + d -> left_option + fn + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -317,34 +239,21 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "arrow_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
             {
-              "set_variable": {
-                "name": "arrow_mode",
-                "value": 1
-              }
-            },
-            {
               "key_code": "left_shift",
               "modifiers": [
-                "left_option"
+                "left_option",
+                "fn"
               ]
             }
           ]
         },
         {
-          "description": "spacebar + a + f -> left_command + to_key",
+          "description": "spacebar + a + f -> left_command + fn + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -362,34 +271,21 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "arrow_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
             {
-              "set_variable": {
-                "name": "arrow_mode",
-                "value": 1
-              }
-            },
-            {
               "key_code": "left_shift",
               "modifiers": [
-                "left_command"
+                "left_command",
+                "fn"
               ]
             }
           ]
         },
         {
-          "description": "spacebar + s + d -> left_option + to_key",
+          "description": "spacebar + s + d -> left_option + fn + left_control",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -407,34 +303,21 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "arrow_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "arrow_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_control",
               "modifiers": [
-                "left_option"
+                "left_option",
+                "fn"
               ]
             }
           ]
         },
         {
-          "description": "spacebar + s + f -> left_command + to_key",
+          "description": "spacebar + s + f -> left_command + fn + left_control",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -452,34 +335,21 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "arrow_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
             {
-              "set_variable": {
-                "name": "arrow_mode",
-                "value": 1
-              }
-            },
-            {
               "key_code": "left_control",
               "modifiers": [
-                "left_command"
+                "left_command",
+                "fn"
               ]
             }
           ]
         },
         {
-          "description": "spacebar + d + f -> left_command + to_key",
+          "description": "spacebar + d + f -> left_command + fn + left_option",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -497,34 +367,21 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "arrow_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "arrow_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_option",
               "modifiers": [
-                "left_command"
+                "left_command",
+                "fn"
               ]
             }
           ]
         },
         {
-          "description": "spacebar + a ->  + to_key",
+          "description": "spacebar + a -> fn + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -539,34 +396,20 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "arrow_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
             {
-              "set_variable": {
-                "name": "arrow_mode",
-                "value": 1
-              }
-            },
-            {
               "key_code": "left_shift",
               "modifiers": [
-
+                "fn"
               ]
             }
           ]
         },
         {
-          "description": "spacebar + s ->  + to_key",
+          "description": "spacebar + s -> fn + left_control",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -581,34 +424,20 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "arrow_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
             {
-              "set_variable": {
-                "name": "arrow_mode",
-                "value": 1
-              }
-            },
-            {
               "key_code": "left_control",
               "modifiers": [
-
+                "fn"
               ]
             }
           ]
         },
         {
-          "description": "spacebar + d ->  + to_key",
+          "description": "spacebar + d -> fn + left_option",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -623,34 +452,20 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "arrow_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
             {
-              "set_variable": {
-                "name": "arrow_mode",
-                "value": 1
-              }
-            },
-            {
               "key_code": "left_option",
               "modifiers": [
-
+                "fn"
               ]
             }
           ]
         },
         {
-          "description": "spacebar + f ->  + to_key",
+          "description": "spacebar + f -> fn + left_command",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -665,34 +480,25 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "arrow_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "arrow_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_command",
               "modifiers": [
-
+                "fn"
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "description": "Change G + ␣ to fn",
+      "manipulators": [
         {
-          "description": "spacebar + g ->  + to_key",
+          "description": "spacebar + g ->  + fn",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -707,40 +513,560 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "arrow_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
             {
-              "set_variable": {
-                "name": "arrow_mode",
-                "value": 1
-              }
-            },
-            {
-              "key_code": "vk_none",
+              "key_code": "fn",
               "modifiers": [
 
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "description": "Change J/K/L/; + ␣ to ⌘/⌥/⌃/⇧ + fn",
+      "manipulators": [
+        {
+          "description": "spacebar + semicolon + l + k + j -> left_control + left_option + left_command + fn + left_shift",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "spacebar"
+              },
+              {
+                "key_code": "semicolon"
+              },
+              {
+                "key_code": "l"
+              },
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "j"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "modifiers": [
+                "left_control",
+                "left_option",
+                "left_command",
+                "fn"
+              ]
+            }
+          ]
         },
         {
-          "description": "i -> up_arrow when var is 1",
+          "description": "spacebar + semicolon + l + k -> left_control + left_option + fn + left_shift",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "spacebar"
+              },
+              {
+                "key_code": "semicolon"
+              },
+              {
+                "key_code": "l"
+              },
+              {
+                "key_code": "k"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "modifiers": [
+                "left_control",
+                "left_option",
+                "fn"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "spacebar + semicolon + l + j -> left_control + left_command + fn + left_shift",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "spacebar"
+              },
+              {
+                "key_code": "semicolon"
+              },
+              {
+                "key_code": "l"
+              },
+              {
+                "key_code": "j"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "modifiers": [
+                "left_control",
+                "left_command",
+                "fn"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "spacebar + semicolon + k + j -> left_option + left_command + fn + left_shift",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "spacebar"
+              },
+              {
+                "key_code": "semicolon"
+              },
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "j"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "modifiers": [
+                "left_option",
+                "left_command",
+                "fn"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "spacebar + l + k + j -> left_option + left_command + fn + left_control",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "spacebar"
+              },
+              {
+                "key_code": "l"
+              },
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "j"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "modifiers": [
+                "left_option",
+                "left_command",
+                "fn"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "spacebar + semicolon + l -> left_control + fn + left_shift",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "spacebar"
+              },
+              {
+                "key_code": "semicolon"
+              },
+              {
+                "key_code": "l"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "modifiers": [
+                "left_control",
+                "fn"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "spacebar + semicolon + k -> left_option + fn + left_shift",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "spacebar"
+              },
+              {
+                "key_code": "semicolon"
+              },
+              {
+                "key_code": "k"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "modifiers": [
+                "left_option",
+                "fn"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "spacebar + semicolon + j -> left_command + fn + left_shift",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "spacebar"
+              },
+              {
+                "key_code": "semicolon"
+              },
+              {
+                "key_code": "j"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "modifiers": [
+                "left_command",
+                "fn"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "spacebar + l + k -> left_option + fn + left_control",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "spacebar"
+              },
+              {
+                "key_code": "l"
+              },
+              {
+                "key_code": "k"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "modifiers": [
+                "left_option",
+                "fn"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "spacebar + l + j -> left_command + fn + left_control",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "spacebar"
+              },
+              {
+                "key_code": "l"
+              },
+              {
+                "key_code": "j"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "modifiers": [
+                "left_command",
+                "fn"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "spacebar + k + j -> left_command + fn + left_option",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "spacebar"
+              },
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "j"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_option",
+              "modifiers": [
+                "left_command",
+                "fn"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "spacebar + semicolon -> fn + left_shift",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "spacebar"
+              },
+              {
+                "key_code": "semicolon"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "modifiers": [
+                "fn"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "spacebar + l -> fn + left_control",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "spacebar"
+              },
+              {
+                "key_code": "l"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "modifiers": [
+                "fn"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "spacebar + k -> fn + left_option",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "spacebar"
+              },
+              {
+                "key_code": "k"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_option",
+              "modifiers": [
+                "fn"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "spacebar + j -> fn + left_command",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "spacebar"
+              },
+              {
+                "key_code": "j"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_command",
+              "modifiers": [
+                "fn"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Change H + ␣ to fn",
+      "manipulators": [
+        {
+          "description": "spacebar + h ->  + fn",
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "spacebar"
+              },
+              {
+                "key_code": "h"
+              }
+            ],
+            "simultaneous_options": {
+              "detect_key_down_uninterruptedly": true,
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "fn",
+              "modifiers": [
+
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Change fn + I/J/K/L/M/;/U/O/Y/P to ↑/←/↓/→/⌫/⌦/⇞/⇟/↖/↘",
+      "manipulators": [
+        {
+          "description": "fn + i -> up_arrow",
           "type": "basic",
           "from": {
             "key_code": "i",
             "modifiers": {
               "optional": [
                 "any"
+              ],
+              "mandatory": [
+                "fn"
               ]
             }
           },
@@ -748,23 +1074,19 @@
             {
               "key_code": "up_arrow"
             }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "arrow_mode",
-              "value": 1
-            }
           ]
         },
         {
-          "description": "j -> left_arrow when var is 1",
+          "description": "fn + j -> left_arrow",
           "type": "basic",
           "from": {
             "key_code": "j",
             "modifiers": {
               "optional": [
                 "any"
+              ],
+              "mandatory": [
+                "fn"
               ]
             }
           },
@@ -772,23 +1094,19 @@
             {
               "key_code": "left_arrow"
             }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "arrow_mode",
-              "value": 1
-            }
           ]
         },
         {
-          "description": "k -> down_arrow when var is 1",
+          "description": "fn + k -> down_arrow",
           "type": "basic",
           "from": {
             "key_code": "k",
             "modifiers": {
               "optional": [
                 "any"
+              ],
+              "mandatory": [
+                "fn"
               ]
             }
           },
@@ -796,23 +1114,19 @@
             {
               "key_code": "down_arrow"
             }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "arrow_mode",
-              "value": 1
-            }
           ]
         },
         {
-          "description": "l -> right_arrow when var is 1",
+          "description": "fn + l -> right_arrow",
           "type": "basic",
           "from": {
             "key_code": "l",
             "modifiers": {
               "optional": [
                 "any"
+              ],
+              "mandatory": [
+                "fn"
               ]
             }
           },
@@ -820,23 +1134,19 @@
             {
               "key_code": "right_arrow"
             }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "arrow_mode",
-              "value": 1
-            }
           ]
         },
         {
-          "description": "m -> delete_or_backspace when var is 1",
+          "description": "fn + m -> delete_or_backspace",
           "type": "basic",
           "from": {
             "key_code": "m",
             "modifiers": {
               "optional": [
                 "any"
+              ],
+              "mandatory": [
+                "fn"
               ]
             }
           },
@@ -844,23 +1154,19 @@
             {
               "key_code": "delete_or_backspace"
             }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "arrow_mode",
-              "value": 1
-            }
           ]
         },
         {
-          "description": "semicolon -> delete_forward when var is 1",
+          "description": "fn + semicolon -> delete_forward",
           "type": "basic",
           "from": {
             "key_code": "semicolon",
             "modifiers": {
               "optional": [
                 "any"
+              ],
+              "mandatory": [
+                "fn"
               ]
             }
           },
@@ -868,23 +1174,19 @@
             {
               "key_code": "delete_forward"
             }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "arrow_mode",
-              "value": 1
-            }
           ]
         },
         {
-          "description": "u -> page_up when var is 1",
+          "description": "fn + u -> page_up",
           "type": "basic",
           "from": {
             "key_code": "u",
             "modifiers": {
               "optional": [
                 "any"
+              ],
+              "mandatory": [
+                "fn"
               ]
             }
           },
@@ -892,23 +1194,19 @@
             {
               "key_code": "page_up"
             }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "arrow_mode",
-              "value": 1
-            }
           ]
         },
         {
-          "description": "o -> page_down when var is 1",
+          "description": "fn + o -> page_down",
           "type": "basic",
           "from": {
             "key_code": "o",
             "modifiers": {
               "optional": [
                 "any"
+              ],
+              "mandatory": [
+                "fn"
               ]
             }
           },
@@ -916,23 +1214,19 @@
             {
               "key_code": "page_down"
             }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "arrow_mode",
-              "value": 1
-            }
           ]
         },
         {
-          "description": "y -> home when var is 1",
+          "description": "fn + y -> home",
           "type": "basic",
           "from": {
             "key_code": "y",
             "modifiers": {
               "optional": [
                 "any"
+              ],
+              "mandatory": [
+                "fn"
               ]
             }
           },
@@ -940,23 +1234,19 @@
             {
               "key_code": "home"
             }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "arrow_mode",
-              "value": 1
-            }
           ]
         },
         {
-          "description": "p -> end when var is 1",
+          "description": "fn + p -> end",
           "type": "basic",
           "from": {
             "key_code": "p",
             "modifiers": {
               "optional": [
                 "any"
+              ],
+              "mandatory": [
+                "fn"
               ]
             }
           },
@@ -964,22 +1254,260 @@
             {
               "key_code": "end"
             }
-          ],
-          "conditions": [
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Change fn + 1/2/3/4/5/6/7/8/9/0/-/= to F1/.../F12",
+      "manipulators": [
+        {
+          "description": "fn + 1 -> f1",
+          "type": "basic",
+          "from": {
+            "key_code": "1",
+            "modifiers": {
+              "optional": [
+                "any"
+              ],
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
             {
-              "type": "variable_if",
-              "name": "arrow_mode",
-              "value": 1
+              "key_code": "f1"
+            }
+          ]
+        },
+        {
+          "description": "fn + 2 -> f2",
+          "type": "basic",
+          "from": {
+            "key_code": "2",
+            "modifiers": {
+              "optional": [
+                "any"
+              ],
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f2"
+            }
+          ]
+        },
+        {
+          "description": "fn + 3 -> f3",
+          "type": "basic",
+          "from": {
+            "key_code": "3",
+            "modifiers": {
+              "optional": [
+                "any"
+              ],
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f3"
+            }
+          ]
+        },
+        {
+          "description": "fn + 4 -> f4",
+          "type": "basic",
+          "from": {
+            "key_code": "4",
+            "modifiers": {
+              "optional": [
+                "any"
+              ],
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f4"
+            }
+          ]
+        },
+        {
+          "description": "fn + 5 -> f5",
+          "type": "basic",
+          "from": {
+            "key_code": "5",
+            "modifiers": {
+              "optional": [
+                "any"
+              ],
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f5"
+            }
+          ]
+        },
+        {
+          "description": "fn + 6 -> f6",
+          "type": "basic",
+          "from": {
+            "key_code": "6",
+            "modifiers": {
+              "optional": [
+                "any"
+              ],
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f6"
+            }
+          ]
+        },
+        {
+          "description": "fn + 7 -> f7",
+          "type": "basic",
+          "from": {
+            "key_code": "7",
+            "modifiers": {
+              "optional": [
+                "any"
+              ],
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f7"
+            }
+          ]
+        },
+        {
+          "description": "fn + 8 -> f8",
+          "type": "basic",
+          "from": {
+            "key_code": "8",
+            "modifiers": {
+              "optional": [
+                "any"
+              ],
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f8"
+            }
+          ]
+        },
+        {
+          "description": "fn + 9 -> f9",
+          "type": "basic",
+          "from": {
+            "key_code": "9",
+            "modifiers": {
+              "optional": [
+                "any"
+              ],
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f9"
+            }
+          ]
+        },
+        {
+          "description": "fn + 0 -> f10",
+          "type": "basic",
+          "from": {
+            "key_code": "0",
+            "modifiers": {
+              "optional": [
+                "any"
+              ],
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f10"
+            }
+          ]
+        },
+        {
+          "description": "fn + hyphen -> f11",
+          "type": "basic",
+          "from": {
+            "key_code": "hyphen",
+            "modifiers": {
+              "optional": [
+                "any"
+              ],
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f11"
+            }
+          ]
+        },
+        {
+          "description": "fn + equal_sign -> f12",
+          "type": "basic",
+          "from": {
+            "key_code": "equal_sign",
+            "modifiers": {
+              "optional": [
+                "any"
+              ],
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f12"
             }
           ]
         }
       ]
     },
     {
-      "description": "Change A/S/D/F and J/K/L/; to ⇧/⌃/⌥/⌘ and ⌘/⌥/⌃/⇧ when press 2/3/4 keys simultaneously on the same side;\n S+V -> ⌃; D+V -> ⌥; K+M -> ⌥; L+M -> ⌃",
+      "description": "Change A/S/D/F to ⇧/⌃/⌥/⌘ when press 2, 3, or 4 keys simultaneously",
       "manipulators": [
         {
-          "description": "a + s + d + f -> left_control + left_option + left_command + to_key",
+          "description": "a + s + d + f -> left_control + left_option + left_command + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1000,24 +1528,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -1029,7 +1543,7 @@
           ]
         },
         {
-          "description": "a + s + d -> left_control + left_option + to_key",
+          "description": "a + s + d -> left_control + left_option + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1047,24 +1561,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -1075,7 +1575,7 @@
           ]
         },
         {
-          "description": "a + s + f -> left_control + left_command + to_key",
+          "description": "a + s + f -> left_control + left_command + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1093,24 +1593,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -1121,7 +1607,7 @@
           ]
         },
         {
-          "description": "a + d + f -> left_option + left_command + to_key",
+          "description": "a + d + f -> left_option + left_command + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1139,24 +1625,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -1167,7 +1639,7 @@
           ]
         },
         {
-          "description": "s + d + f -> left_option + left_command + to_key",
+          "description": "s + d + f -> left_option + left_command + left_control",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1185,24 +1657,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_control",
               "modifiers": [
@@ -1213,7 +1671,7 @@
           ]
         },
         {
-          "description": "a + s -> left_control + to_key",
+          "description": "a + s -> left_control + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1228,24 +1686,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -1255,7 +1699,7 @@
           ]
         },
         {
-          "description": "a + d -> left_option + to_key",
+          "description": "a + d -> left_option + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1270,24 +1714,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -1297,7 +1727,7 @@
           ]
         },
         {
-          "description": "a + f -> left_command + to_key",
+          "description": "a + f -> left_command + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1312,24 +1742,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -1339,7 +1755,7 @@
           ]
         },
         {
-          "description": "s + d -> left_option + to_key",
+          "description": "s + d -> left_option + left_control",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1354,24 +1770,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_control",
               "modifiers": [
@@ -1381,7 +1783,7 @@
           ]
         },
         {
-          "description": "s + f -> left_command + to_key",
+          "description": "s + f -> left_command + left_control",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1396,24 +1798,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_control",
               "modifiers": [
@@ -1423,7 +1811,7 @@
           ]
         },
         {
-          "description": "d + f -> left_command + to_key",
+          "description": "d + f -> left_command + left_option",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1438,24 +1826,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_option",
               "modifiers": [
@@ -1463,9 +1837,14 @@
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "description": "Change S+C to ⌃ and D+C to ⌥",
+      "manipulators": [
         {
-          "description": "s + v ->  + to_key",
+          "description": "s + c ->  + left_control",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1473,31 +1852,17 @@
                 "key_code": "s"
               },
               {
-                "key_code": "v"
+                "key_code": "c"
               }
             ],
             "simultaneous_options": {
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_control",
               "modifiers": [
@@ -1507,7 +1872,7 @@
           ]
         },
         {
-          "description": "d + v ->  + to_key",
+          "description": "d + c ->  + left_option",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1515,31 +1880,17 @@
                 "key_code": "d"
               },
               {
-                "key_code": "v"
+                "key_code": "c"
               }
             ],
             "simultaneous_options": {
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_option",
               "modifiers": [
@@ -1547,9 +1898,14 @@
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "description": "Change J/K/L/; to ⌘/⌥/⌃/⇧ when press 2, 3, or 4 keys simultaneously",
+      "manipulators": [
         {
-          "description": "semicolon + l + k + j -> left_control + left_option + left_command + to_key",
+          "description": "semicolon + l + k + j -> left_control + left_option + left_command + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1570,24 +1926,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -1599,7 +1941,7 @@
           ]
         },
         {
-          "description": "semicolon + l + k -> left_control + left_option + to_key",
+          "description": "semicolon + l + k -> left_control + left_option + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1617,24 +1959,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -1645,7 +1973,7 @@
           ]
         },
         {
-          "description": "semicolon + l + j -> left_control + left_command + to_key",
+          "description": "semicolon + l + j -> left_control + left_command + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1663,24 +1991,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -1691,7 +2005,7 @@
           ]
         },
         {
-          "description": "semicolon + k + j -> left_option + left_command + to_key",
+          "description": "semicolon + k + j -> left_option + left_command + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1709,24 +2023,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -1737,7 +2037,7 @@
           ]
         },
         {
-          "description": "l + k + j -> left_option + left_command + to_key",
+          "description": "l + k + j -> left_option + left_command + left_control",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1755,24 +2055,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_control",
               "modifiers": [
@@ -1783,7 +2069,7 @@
           ]
         },
         {
-          "description": "semicolon + l -> left_control + to_key",
+          "description": "semicolon + l -> left_control + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1798,24 +2084,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -1825,7 +2097,7 @@
           ]
         },
         {
-          "description": "semicolon + k -> left_option + to_key",
+          "description": "semicolon + k -> left_option + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1840,24 +2112,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -1867,7 +2125,7 @@
           ]
         },
         {
-          "description": "semicolon + j -> left_command + to_key",
+          "description": "semicolon + j -> left_command + left_shift",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1882,24 +2140,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -1909,7 +2153,7 @@
           ]
         },
         {
-          "description": "l + k -> left_option + to_key",
+          "description": "l + k -> left_option + left_control",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1924,24 +2168,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_control",
               "modifiers": [
@@ -1951,7 +2181,7 @@
           ]
         },
         {
-          "description": "l + j -> left_command + to_key",
+          "description": "l + j -> left_command + left_control",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -1966,24 +2196,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_control",
               "modifiers": [
@@ -1993,7 +2209,7 @@
           ]
         },
         {
-          "description": "k + j -> left_command + to_key",
+          "description": "k + j -> left_command + left_option",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -2008,24 +2224,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_option",
               "modifiers": [
@@ -2033,9 +2235,14 @@
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "description": "Change K+M to ⌥ and L+M to ⌃",
+      "manipulators": [
         {
-          "description": "l + m ->  + to_key",
+          "description": "l + m ->  + left_control",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -2050,24 +2257,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_control",
               "modifiers": [
@@ -2077,7 +2270,7 @@
           ]
         },
         {
-          "description": "k + m ->  + to_key",
+          "description": "k + m ->  + left_option",
           "type": "basic",
           "from": {
             "simultaneous": [
@@ -2092,24 +2285,10 @@
               "detect_key_down_uninterruptedly": true,
               "key_down_order": "insensitive",
               "key_up_order": "insensitive",
-              "key_up_when": "any",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "noop_mode",
-                    "value": 0
-                  }
-                }
-              ]
+              "key_up_when": "any"
             }
           },
           "to": [
-            {
-              "set_variable": {
-                "name": "noop_mode",
-                "value": 1
-              }
-            },
             {
               "key_code": "left_option",
               "modifiers": [
