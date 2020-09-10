@@ -100,36 +100,44 @@ def main
       {
         "description" => "Change fn + I/J/K/L/M/;/U/O/Y/P to ↑/←/↓/→/⌫/⌦/⇞/⇟/↖/↘",
         "manipulators" => [
-          generate_rebind_if("i", "up_arrow"),
-          generate_rebind_if("j", "left_arrow"),
-          generate_rebind_if("k", "down_arrow"),
-          generate_rebind_if("l", "right_arrow"),
-          generate_rebind_if("m", "delete_or_backspace"),
-          generate_rebind_if("semicolon", "delete_forward"),
-          generate_rebind_if("u", "page_up"),
-          generate_rebind_if("o", "page_down"),
-          generate_rebind_if("y", "home"),
-          generate_rebind_if("p", "end"),
+          rebind_when_fn("i", "up_arrow"),
+          rebind_when_fn("j", "left_arrow"),
+          rebind_when_fn("k", "down_arrow"),
+          rebind_when_fn("l", "right_arrow"),
+          rebind_when_fn("m", "delete_or_backspace"),
+          rebind_when_fn("semicolon", "delete_forward"),
+          rebind_when_fn("u", "page_up"),
+          rebind_when_fn("o", "page_down"),
+          rebind_when_fn("y", "home"),
+          rebind_when_fn("p", "end"),
         ],
       },
 
       {
         "description" => "Change fn + 1/2/3/4/5/6/7/8/9/0/-/= to F1/F2/F3/F4/F5/F6/F7/F8/F9/F10/F11/F12",
         "manipulators" => [
-          generate_rebind_if("1", "f1"),
-          generate_rebind_if("2", "f2"),
-          generate_rebind_if("3", "f3"),
-          generate_rebind_if("4", "f4"),
-          generate_rebind_if("5", "f5"),
-          generate_rebind_if("6", "f6"),
-          generate_rebind_if("7", "f7"),
-          generate_rebind_if("8", "f8"),
-          generate_rebind_if("9", "f9"),
-          generate_rebind_if("0", "f10"),
-          generate_rebind_if("hyphen", "f11"),
-          generate_rebind_if("equal_sign", "f12"),
+          rebind_when_fn("1", "f1"),
+          rebind_when_fn("2", "f2"),
+          rebind_when_fn("3", "f3"),
+          rebind_when_fn("4", "f4"),
+          rebind_when_fn("5", "f5"),
+          rebind_when_fn("6", "f6"),
+          rebind_when_fn("7", "f7"),
+          rebind_when_fn("8", "f8"),
+          rebind_when_fn("9", "f9"),
+          rebind_when_fn("0", "f10"),
+          rebind_when_fn("hyphen", "f11"),
+          rebind_when_fn("equal_sign", "f12"),
         ],
       },
+
+      {
+        "description" => "Change fn + escape to caps_lock",
+        "manipulators" => [
+          rebind_when_fn("escape", "caps_lock"),
+        ],
+      },
+
     ],
   )
 end
@@ -139,6 +147,13 @@ def generate_simultaneous(from_keys, to_key, modifiers)
       "description" => "#{from_keys.join(" + ")} -> #{modifiers.join(" + ")} + #{to_key}",
       "type" => "basic",
       "from" => {
+          "modifiers" =>
+          {
+            "optional" =>
+            [
+              "any",
+            ],
+          },
           "simultaneous" => KeyCodes.map(*from_keys),
           "simultaneous_options" =>
            {
@@ -159,7 +174,7 @@ def generate_simultaneous(from_keys, to_key, modifiers)
     }
 end
 
-def generate_rebind_if(from_key, to_key)
+def rebind_when_fn(from_key, to_key)
   {
     "description" => "fn + #{from_key} -> #{to_key}",  
     "type" => "basic",
