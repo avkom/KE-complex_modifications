@@ -10,7 +10,7 @@ def main
     "rules" => [
 
       {
-        "description" => "Change A/S/D/F + ␣ to ⇧/⌃/⌥/⌘ + fn",
+        "description" => "Change A/S/D/F/spacebar to ⇧/⌃/⌥/⌘/fn when press two or more keys simultaneously",
         "manipulators" => [
           generate_simultaneous(["spacebar", "a", "s", "d", "f"], "left_shift", ["left_control", "left_option", "left_command", "fn"]),
 
@@ -18,6 +18,7 @@ def main
           generate_simultaneous(["spacebar", "a", "s", "f"], "left_shift", ["left_control", "left_command", "fn"]),
           generate_simultaneous(["spacebar", "a", "d", "f"], "left_shift", ["left_option", "left_command", "fn"]),
           generate_simultaneous(["spacebar", "s", "d", "f"], "left_control", ["left_option", "left_command", "fn"]),
+          generate_simultaneous(["a", "s", "d", "f"], "left_shift", ["left_control", "left_option", "left_command"]),
 
           generate_simultaneous(["spacebar", "a", "s"], "left_shift", ["left_control", "fn"]),
           generate_simultaneous(["spacebar", "a", "d"], "left_shift", ["left_option", "fn"]),
@@ -25,23 +26,35 @@ def main
           generate_simultaneous(["spacebar", "s", "d"], "left_control", ["left_option", "fn"]),
           generate_simultaneous(["spacebar", "s", "f"], "left_control", ["left_command", "fn"]),
           generate_simultaneous(["spacebar", "d", "f"], "left_option", ["left_command", "fn"]),
+          generate_simultaneous(["a", "s", "d"], "left_shift", ["left_control", "left_option"]),
+          generate_simultaneous(["a", "s", "f"], "left_shift", ["left_control", "left_command"]),
+          generate_simultaneous(["a", "d", "f"], "left_shift", ["left_option", "left_command"]),
+          generate_simultaneous(["s", "d", "f"], "left_control", ["left_option", "left_command"]),
 
           generate_simultaneous(["spacebar", "a"], "left_shift", ["fn"]),
           generate_simultaneous(["spacebar", "s"], "left_control", ["fn"]),
           generate_simultaneous(["spacebar", "d"], "left_option", ["fn"]),
           generate_simultaneous(["spacebar", "f"], "left_command", ["fn"]),
+          generate_simultaneous(["a", "s"], "left_shift", ["left_control"]),
+          generate_simultaneous(["a", "d"], "left_shift", ["left_option"]),
+          generate_simultaneous(["a", "f"], "left_shift", ["left_command"]),
+          generate_simultaneous(["s", "d"], "left_control", ["left_option"]),
+          generate_simultaneous(["s", "f"], "left_control", ["left_command"]),
+          generate_simultaneous(["d", "f"], "left_option", ["left_command"]),
         ],
       },
 
       {
-        "description" => "Change G + ␣ to fn",
+        "description" => "Change S + C to \"⌃\", D + C to \"⌥\", and spacebar + G to \"fn\" when press the key pair simultaneously",
         "manipulators" => [
           generate_simultaneous(["spacebar", "g"], "fn", []),
+          generate_simultaneous(["s", "c"], "left_control", []),
+          generate_simultaneous(["d", "c"], "left_option", []),
         ],
       },
 
       {
-        "description" => "Change J/K/L/; + ␣ to ⌘/⌥/⌃/⇧ + fn",
+        "description" => "Change spacebar/J/K/L/; to fn/⌘/⌥/⌃/⇧ when press two or more keys simultaneously",
         "manipulators" => [
             generate_simultaneous(["spacebar", "semicolon", "l", "k", "j"], "left_shift", ["left_control", "left_option", "left_command", "fn"]),
 
@@ -49,6 +62,7 @@ def main
             generate_simultaneous(["spacebar", "semicolon", "l", "j"], "left_shift", ["left_control", "left_command", "fn"]),
             generate_simultaneous(["spacebar", "semicolon", "k", "j"], "left_shift", ["left_option", "left_command", "fn"]),
             generate_simultaneous(["spacebar", "l", "k", "j"], "left_control", ["left_option", "left_command", "fn"]),
+            generate_simultaneous(["semicolon", "l", "k", "j"], "left_shift", ["left_control", "left_option", "left_command"]),
 
             generate_simultaneous(["spacebar", "semicolon", "l"], "left_shift", ["left_control", "fn"]),
             generate_simultaneous(["spacebar", "semicolon", "k"], "left_shift", ["left_option", "fn"]),
@@ -56,18 +70,30 @@ def main
             generate_simultaneous(["spacebar", "l", "k"], "left_control", ["left_option", "fn"]),
             generate_simultaneous(["spacebar", "l", "j"], "left_control", ["left_command", "fn"]),
             generate_simultaneous(["spacebar", "k", "j"], "left_option", ["left_command", "fn"]),
+            generate_simultaneous(["semicolon", "l", "k"], "left_shift", ["left_control", "left_option"]),
+            generate_simultaneous(["semicolon", "l", "j"], "left_shift", ["left_control", "left_command"]),
+            generate_simultaneous(["semicolon", "k", "j"], "left_shift", ["left_option", "left_command"]),
+            generate_simultaneous(["l", "k", "j"], "left_control", ["left_option", "left_command"]),
 
             generate_simultaneous(["spacebar", "semicolon"], "left_shift", ["fn"]),
             generate_simultaneous(["spacebar", "l"], "left_control", ["fn"]),
             generate_simultaneous(["spacebar", "k"], "left_option", ["fn"]),
             generate_simultaneous(["spacebar", "j"], "left_command", ["fn"]),
+            generate_simultaneous(["semicolon", "l"], "left_shift", ["left_control"]),
+            generate_simultaneous(["semicolon", "k"], "left_shift", ["left_option"]),
+            generate_simultaneous(["semicolon", "j"], "left_shift", ["left_command"]),
+            generate_simultaneous(["l", "k"], "left_control", ["left_option"]),
+            generate_simultaneous(["l", "j"], "left_control", ["left_command"]),
+            generate_simultaneous(["k", "j"], "left_option", ["left_command"]),
         ],
       },
 
       {
-        "description" => "Change H + ␣ to fn",
+        "description" => "Change K + M to \"⌥\", L + M to \"⌃\", and spacebar + H to \"fn\" when press the key pair simultaneously",
         "manipulators" => [
-          generate_simultaneous(["spacebar", "h"], "fn", []),
+            generate_simultaneous(["spacebar", "h"], "fn", []),
+            generate_simultaneous(["l", "m"], "left_control", []),
+            generate_simultaneous(["k", "m"], "left_option", []),
         ],
       },
 
@@ -88,7 +114,7 @@ def main
       },
 
       {
-        "description" => "Change fn + 1/2/3/4/5/6/7/8/9/0/-/= to F1/.../F12",
+        "description" => "Change fn + 1/2/3/4/5/6/7/8/9/0/-/= to F1/F2/F3/F4/F5/F6/F7/F8/F9/F10/F11/F12",
         "manipulators" => [
           generate_rebind_if("1", "f1"),
           generate_rebind_if("2", "f2"),
@@ -104,61 +130,6 @@ def main
           generate_rebind_if("equal_sign", "f12"),
         ],
       },
-
-      {
-        "description" => "Change A/S/D/F to ⇧/⌃/⌥/⌘ when press 2, 3, or 4 keys simultaneously",
-        "manipulators" => [
-            generate_simultaneous(["a", "s", "d", "f"], "left_shift", ["left_control", "left_option", "left_command"]),
-
-            generate_simultaneous(["a", "s", "d"], "left_shift", ["left_control", "left_option"]),
-            generate_simultaneous(["a", "s", "f"], "left_shift", ["left_control", "left_command"]),
-            generate_simultaneous(["a", "d", "f"], "left_shift", ["left_option", "left_command"]),
-            generate_simultaneous(["s", "d", "f"], "left_control", ["left_option", "left_command"]),
-
-            generate_simultaneous(["a", "s"], "left_shift", ["left_control"]),
-            generate_simultaneous(["a", "d"], "left_shift", ["left_option"]),
-            generate_simultaneous(["a", "f"], "left_shift", ["left_command"]),
-            generate_simultaneous(["s", "d"], "left_control", ["left_option"]),
-            generate_simultaneous(["s", "f"], "left_control", ["left_command"]),
-            generate_simultaneous(["d", "f"], "left_option", ["left_command"]),
-        ],
-      },
-
-      {
-        "description" => "Change S+C to ⌃ and D+C to ⌥",
-        "manipulators" => [
-            generate_simultaneous(["s", "c"], "left_control", []),
-            generate_simultaneous(["d", "c"], "left_option", []),
-        ],
-      },
-
-      {
-        "description" => "Change J/K/L/; to ⌘/⌥/⌃/⇧ when press 2, 3, or 4 keys simultaneously",
-        "manipulators" => [
-            generate_simultaneous(["semicolon", "l", "k", "j"], "left_shift", ["left_control", "left_option", "left_command"]),
-
-            generate_simultaneous(["semicolon", "l", "k"], "left_shift", ["left_control", "left_option"]),
-            generate_simultaneous(["semicolon", "l", "j"], "left_shift", ["left_control", "left_command"]),
-            generate_simultaneous(["semicolon", "k", "j"], "left_shift", ["left_option", "left_command"]),
-            generate_simultaneous(["l", "k", "j"], "left_control", ["left_option", "left_command"]),
-
-            generate_simultaneous(["semicolon", "l"], "left_shift", ["left_control"]),
-            generate_simultaneous(["semicolon", "k"], "left_shift", ["left_option"]),
-            generate_simultaneous(["semicolon", "j"], "left_shift", ["left_command"]),
-            generate_simultaneous(["l", "k"], "left_control", ["left_option"]),
-            generate_simultaneous(["l", "j"], "left_control", ["left_command"]),
-            generate_simultaneous(["k", "j"], "left_option", ["left_command"]),
-        ],
-      },
-
-      {
-        "description" => "Change K+M to ⌥ and L+M to ⌃",
-        "manipulators" => [
-            generate_simultaneous(["l", "m"], "left_control", []),
-            generate_simultaneous(["k", "m"], "left_option", []),
-        ],
-      },
-
     ],
   )
 end
